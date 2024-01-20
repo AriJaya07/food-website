@@ -1,0 +1,24 @@
+.slideshowContainer {
+    position: relative;
+}
+
+.slideshow {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.active {
+    opacity: 1;
+}
+
+.relative {
+    transition: opacity 1s ease-in; /* Add a transition for the images within a slide */
+}
