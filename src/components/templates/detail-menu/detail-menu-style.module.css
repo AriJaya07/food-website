@@ -1,0 +1,14 @@
+.slick-slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 24px;
+    color: #000;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
