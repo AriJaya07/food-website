@@ -76,7 +76,6 @@ export default function Branch({currentLanguage}: { currentLanguage: 'ind' | 'en
 
 	const showDivs = (n: number) => {
 		const x = document.getElementsByClassName('mySlides') as HTMLCollectionOf<HTMLElement>
-		const dots = document.getElementsByClassName('demodots') as HTMLCollectionOf<HTMLElement>
 
 		if (n > x.length) setSlideIndex(1)
 		if (n < 1) setSlideIndex(x.length)
@@ -85,17 +84,9 @@ export default function Branch({currentLanguage}: { currentLanguage: 'ind' | 'en
 			x[i].style.display = 'none'
 		}
 
-		for (let i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(' w3-white', '')
-		}
-
 		if (slideIndex > 0 && slideIndex <= x.length) {
 			if (x[slideIndex - 1]) {
 				x[slideIndex - 1].style.display = 'block'
-			}
-
-			if (dots[slideIndex - 1]) {
-				dots[slideIndex - 1].className += ' w3-white'
 			}
 		}
 	}
@@ -116,35 +107,34 @@ export default function Branch({currentLanguage}: { currentLanguage: 'ind' | 'en
 							</div>
 							<div className={'flex flex-row gap-[1em]'}>
 								<div className={'flex flex-col flex-wrap p-2 rounded gap-[1em]'}>
-									<div className={'w3-container'}>
+									<div className={''}>
 										{item.content.map((itemContent: MockBranchContent, indexContent: number) => (
-											<div key={indexContent} className={'w3-container mySlides'}>
+											<div key={indexContent} className={'mySlides'}>
 												<div
-													className={'flex flex-col border border-white p-2 gap-[1em] w-3-display-container'}>
+													className={'flex flex-col border border-white p-2 gap-[1em]'}>
 													<img
 														src={itemContent.image}
 														className={'2xl:w-[0em] sm:w-[10em] w-full'}
 														alt={`image-${indexContent}`}
 													/>
-													<div className={'w3-display-top-left w3-container w3-padding-32'}>
+													<div className={''}>
 									                    <span
-										                    className={'2xl:text-[1.5em] text-[1em] font-[700] w3-white w3-padding-large w3-animation-bottom'}>
+										                    className={'2xl:text-[1.5em] text-[1em] font-[700]'}>
 									                      {currentLanguage === 'ind' ? itemContent.title[0] : itemContent.title[1]}
 									                    </span>
 													</div>
 												</div>
-												<div className={'w3-center'}>
+												<div className={''}>
 								                  <span onClick={() => currentDiv(indexContent)}
-								                        className={'w3-tag demodots w3-border w3-transparent w3-hover-white'}>
+								                        className={''}>
 								                  </span>
 												</div>
 											</div>
 										))}
 									</div>
 									<div
-										className={'w3-container w3-dark-gray w3-padding w3-xlarge flex flex-row justify-between' +
-											''}>
-										<div onClick={() => plusDivs(-1)} className={'w3-left cursor-pointer'}>
+										className={'flex flex-row justify-between'}>
+										<div onClick={() => plusDivs(-1)} className={'cursor-pointer'}>
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 											     fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
 												<path fillRule="evenodd"

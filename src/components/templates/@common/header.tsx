@@ -12,7 +12,7 @@ export default function Header({currentLanguage, switchLanguage}): JSX.Element {
 	}
 
 	return (
-		<nav className={'fixed z-[1000] bg-green-800 w-full'}>
+		<nav className={'fixed z-[10000] bg-green-800 w-full'}>
 
 			<div className={'lg:block hidden'}>
 				<div className={'flex flex-row items-center justify-between p-5 mx-[5em]'}>
@@ -42,7 +42,7 @@ export default function Header({currentLanguage, switchLanguage}): JSX.Element {
 								id={'languageDropdown'}
 								value={currentLanguage}
 								onChange={(e) => switchLanguage(e.target.value)}
-								className={'p-2 bg-transparent text-white focus:outline-none font-[700]'}
+								className={'p-2 bg-transparent text-white focus:outline-none font-[700] cursor-pointer'}
 							>
 								<option value={'ind'}>Indonesia</option>
 								<option value={'eng'}>English</option>

@@ -6,3 +6,15 @@
 .fadeIn {
     opacity: 1;
 }
+
+.progressBar {
+    position: fixed;
+    z-index: 1000;
+    top: 5.4em;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: red;
+    transform-origin: 0;
+}
+

@@ -41,11 +41,13 @@ export default function Map(props: any): JSX.Element {
 	})
 
 	return (
+		// @ts-ignore
 		<MapContainer center={position} zoom={zoom} scrollWheelZoom={false} style={mapStyle}>
 			<TileLayer
 				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 			/>
+			{/*@ts-ignore*/}
 			<Marker position={position} icon={markerIcon}>
 				<Popup>
 					A pretty CSS3 popup. <br/> Easily customizable

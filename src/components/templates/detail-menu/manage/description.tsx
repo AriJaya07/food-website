@@ -131,14 +131,14 @@ export default function Description({currentLanguage}: { currentLanguage: string
 
 	return (
 		<div className={''}>
-			<div className={'p-[10em]'}>
+			<div className={'2xl:p-[10em] lg:p-[5em] p-[2em]'}>
 				<div className={'flex flex-col'}>
 					<div>
 						<div className={'flex flex-col justify-center items-center'}>
-							<h5 className={'p-5 font-[700] text-[2em]'}>
+							<h5 className={'lg:p-5 pt-[4em] pb-[2em] font-[700] text-[2em]'}>
 								{currentLanguage === 'ind' ? allData.title[0] : allData.title[1]}
 							</h5>
-							<div className={'flex justify-center items-center w-[50em]'}>
+							<div className={'flex justify-center items-center w-full'}>
 								<Carousel {...carouselSettings}>
 									{allData.image.map((itemImage: string, indexImage: number): JSX.Element => {
 										return (
@@ -152,7 +152,7 @@ export default function Description({currentLanguage}: { currentLanguage: string
 								</Carousel>
 							</div>
 						</div>
-						<div className={'p-5'}>
+						<div className={'2xl:p-[3em] p-2'}>
 							<p className={''}>
 								{currentLanguage === 'ind' ? allData.description[0] : allData.description[1]}
 							</p>
@@ -164,7 +164,7 @@ export default function Description({currentLanguage}: { currentLanguage: string
 										<div>
 											<img
 												src={itemImageDes.imageItem}
-												alt={'image-1-des'} className={'rounded-t-2xl w-[10em]'}/>
+												alt={'image-1-des'} className={'rounded-t-2xl lg:w-[10em] w-full'}/>
 										</div>
 										<div className={'p-5 bg-white rounded-b-2xl'}>
 											<h5 className={'text-center text-black'}>
